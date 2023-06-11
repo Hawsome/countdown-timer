@@ -1,0 +1,355 @@
+HTML:
+
+```html
+<!DOCTYPE html>
+```
+The `<!DOCTYPE html>` declaration specifies the document type and version, which is HTML5 in this case.
+
+```html
+<html lang="en">
+```
+The `<html>` tag is the root element of an HTML document. The `lang` attribute specifies the language of the document, which is set to "en" for English.
+
+```html
+<head>
+  <!-- Meta tags, title, and external resources -->
+</head>
+```
+The `<head>` section contains meta tags, the title of the document, and references to external resources like CSS and JavaScript files. It does not display any visible content on the webpage.
+
+```html
+<body>
+  <!-- The visible content of the webpage -->
+</body>
+```
+The `<body>` tag encloses the visible content of the webpage that is rendered in the browser.
+
+Inside the `<body>` tag, we have the following structure:
+
+```html
+<div class="countdown">
+  <!-- Countdown timer elements -->
+</div>
+```
+This `<div>` element with the class "countdown" contains the countdown timer elements, including days, hours, minutes, and seconds.
+
+```html
+<div class="countdown-form">
+  <!-- Countdown form elements -->
+</div>
+```
+The `<div>` element with the class "countdown-form" contains the form elements for setting the countdown timer.
+
+```html
+<div class="saved-countdowns">
+  <!-- Saved countdowns will be added here dynamically -->
+</div>
+```
+The `<div>` element with the class "saved-countdowns" is a placeholder where saved countdowns will be dynamically added.
+
+```html
+<footer>
+  <!-- Footer content -->
+</footer>
+```
+The `<footer>` tag represents the footer section of the webpage, typically containing copyright information and other relevant details.
+
+Within the `<footer>` tag, we have a `<p>` element for the copyright statement and a `<div>` element with the class "social-icons" that contains social media icons.
+
+Finally, we have the following lines:
+
+```html
+<script src="script.js"></script>
+```
+This `<script>` tag references an external JavaScript file named "script.js" that contains the logic for the countdown timer functionality.
+
+The overall structure of the HTML document includes the necessary elements to create a countdown timer webpage with a form for setting the timer, a display for the countdown, and a footer with social media links. The CSS and JavaScript files are linked externally to provide styling and interactivity to the webpage.
+
+CSS:
+
+This code contains CSS styles for various elements and also includes media queries to apply different styles based on different screen sizes. Let's break down the code and explain each part:
+
+```css
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+```
+This section resets some default styles for all elements. It sets the `box-sizing` property to `border-box`, which ensures that the width and height of elements include the padding and border. It also sets the `margin` and `padding` properties to 0 for all elements.
+
+```css
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+```
+These styles apply to the `body` element. It sets the font family to Arial or a sans-serif fallback, sets the line height to 1.6 (1.6 times the font size), sets the background color to `#f9f9f9` (a light gray), sets the text color to `#333` (a dark gray), and adds a padding of 20 pixels to all sides of the `body` element.
+
+```css
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+```
+These styles apply to elements with the class "countdown". It sets the display property to `flex`, which enables flexbox layout. It uses `justify-content: center` to horizontally center the child elements within the container and `align-items: center` to vertically center them. It also adds a bottom margin of 20 pixels.
+
+```css
+.countdown-item {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  margin: 0 5px;
+  gap: 10px;
+}
+```
+These styles apply to elements with the class "countdown-item". It sets the display property to `flex` and uses `align-items: center` to vertically center the child elements within the container. It also adds left and right margins of 10 pixels (overridden by the subsequent `margin: 0 5px;` to set both left and right margins to 5 pixels) and a gap of 10 pixels between the child elements.
+
+```css
+.countdown-item span {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+```
+These styles apply to `span` elements within elements with the class "countdown-item". It sets the font size to 24 pixels, sets the font weight to `bold`, and adds a top margin of 5 pixels.
+
+```css
+.countdown-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+}
+```
+These styles apply to elements with the class "countdown-form". It sets the display property to `flex` and uses `align-items: center` to vertically center the child elements within the container. It adds a bottom margin of 20 pixels and applies text alignment and horizontal centering to the container using `text-align: center` and `justify-content: center`.
+
+```css
+.countdown-form input[type="datetime-local"],
+.countdown-form button {
+  padding: 10px;
+  font-size: 16px;
+}
+```
+These styles apply to `input` elements of type "datetime-local" and `button` elements within elements with the class "countdown-form". It adds
+
+ 10 pixels of padding to all sides of the elements and sets the font size to 16 pixels.
+
+```css
+.countdown-form button {
+  background-color: #171b82;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+```
+These styles specifically apply to `button` elements within elements with the class "countdown-form". It sets the background color to `#171b82` (a dark blue), sets the text color to `#fff` (white), removes the border, sets the cursor to `pointer` to indicate it is clickable, and adds a left margin of 10 pixels.
+
+```css
+.countdown-form button:hover {
+  background-color: #0c105e;
+}
+```
+These styles apply when hovering over `button` elements within elements with the class "countdown-form". It changes the background color to `#0c105e` (a darker shade of blue) to provide a visual feedback on hover.
+
+```css
+.saved-countdowns {
+  text-align: center;
+  margin-top: 20px;
+}
+```
+These styles apply to elements with the class "saved-countdowns". It sets the text alignment to center and adds a top margin of 20 pixels.
+
+```css
+.saved-countdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+```
+These styles apply to elements with the class "saved-countdown". It sets the display property to `flex`, aligns the child elements using `justify-content: space-between` (to distribute them evenly with space between), and `align-items: center` (to vertically center them). It adds a bottom margin of 10 pixels, 10 pixels of padding, sets the background color to `#fff` (white), adds a box shadow, and sets a border radius of 4 pixels.
+
+```css
+.countdown-name {
+  font-size: 16px;
+}
+```
+These styles apply to elements with the class "countdown-name". It sets the font size to 16 pixels.
+
+```css
+.saved-countdown-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+```
+These styles apply to elements with the class "saved-countdown-actions". It sets the display property to `flex` and uses `align-items: center` to vertically center the child elements within the container. It also adds a top margin of 5 pixels.
+
+```css
+.saved-countdown-actions button {
+  margin-left: 10px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+```
+These styles specifically apply to `button` elements within elements with the class "saved-countdown-actions". It adds a left margin of 10 pixels, sets the cursor to `pointer`, and adds a right margin of 5 pixels.
+
+```css
+.saved-countdown-actions button:hover {
+  background-color: #0c105e;
+}
+```
+These styles apply when hovering over `button` elements within elements with the class "saved-countdown-actions". It changes the background color to `#0c105e` (a darker shade of blue) to provide a visual feedback on hover.
+
+```css
+/* Footer styles */
+footer {
+  background-color: #f8f8f8;
+  color: #888;
+  padding: 10px;
+  text-align: center;
+  border
+
+-radius: 0 0 10px 10px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+```
+These styles apply to `footer` elements. It sets the background color to `#f8f8f8` (a light gray), the text color to `#888` (a gray), adds 10 pixels of padding to all sides, aligns the text to the center, adds a border radius of 10 pixels to the bottom corners, adds a box shadow at the bottom, and adds a top margin of 50 pixels.
+
+```css
+.social-icons {
+  margin-top: 10px;
+}
+```
+These styles apply to elements with the class "social-icons". It adds a top margin of 10 pixels.
+
+```css
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #333;
+}
+```
+These styles apply to `a` elements within elements with the class "social-icons". It sets the display property to `inline-block`, adds a right margin of 10 pixels, and sets the text color to `#333` (a dark gray).
+
+```css
+.social-icons i {
+  font-size: 24px;
+  transition: color 0.2s;
+}
+```
+These styles apply to `i` elements within elements with the class "social-icons". It sets the font size to 24 pixels and adds a color transition effect with a duration of 0.2 seconds.
+
+```css
+.social-icons a:hover i {
+  color: #171b82; 
+}
+```
+These styles apply when hovering over `a` elements within elements with the class "social-icons". It changes the text color to `#171b82` (a dark blue) to provide a visual feedback on hover.
+
+```css
+.social-icons a.linkedin:hover i {
+  color: #0A66C2;
+}
+
+.social-icons a.twitter:hover i {
+  color: #00acee;
+}
+
+.social-icons a.email:hover i {
+  color: #171b82;
+}
+```
+These styles apply when hovering over specific `a` elements within elements with the class "social-icons". It changes the text color to specific colors for LinkedIn, Twitter, and Email icons to provide distinct hover effects.
+
+```css
+/* Add animation to the social icons on hover */
+.social-icons a:hover i {
+  animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+```
+These styles add an animation effect to the social icons when hovering over `a` elements within elements with the class "social-icons". The animation is named "bounce" and has a duration of 0.5 seconds. It scales the icons using CSS transform from the original scale of 1 to 1.2 at 50% of the animation and back to 1 at 100%.
+
+```css
+/* Media Queries */
+@media screen and (max-width: 320px) {
+  .countdown-item span {
+    font-size: 20px;
+  }
+
+  .countdown-form button {
+    margin-left: 5px;
+  }
+
+  countdown {
+    /* flex-direction: column; */
+    align-items: center;
+  }
+
+  .countdown-form button {
+    margin-top: 10px;
+  }
+
+  .countdown-item {
+    margin: 5px 0;
+    flex-wrap: wrap;
+    justify-content
+
+: center;
+  }
+}
+```
+These styles apply when the screen width is 320 pixels or less. It reduces the font size of `span` elements with the class "countdown-item" to 20 pixels. It also adjusts the margins and flex layout for various elements to ensure proper display on smaller screens.
+
+Overall, this CSS code defines styles for a countdown timer application. It sets up the layout and appearance of countdown elements, form inputs, buttons, and social icons. The styles are responsive and adapt to different screen sizes using media queries.
+
+JavaScript:
+
+This code handles the functionality of a countdown timer application. Let's break it down:
+
+1. The code is wrapped inside an event listener for the `DOMContentLoaded` event. This ensures that the code is executed when the HTML document has finished loading.
+
+2. The code starts by selecting various elements from the HTML document using `document.querySelector()`. These selected elements are:
+   - `countdownContainer`: It represents the container element for displaying countdowns.
+   - `countdownForm`: It represents the form element for creating new countdowns.
+   - `savedCountdownsContainer`: It represents the container element for displaying saved countdowns.
+
+3. The `loadSavedCountdowns()` function is defined. This function loads saved countdowns from the browser's local storage, parses the saved countdowns as JSON, and dynamically creates HTML elements to display each saved countdown. It iterates over each saved countdown using `savedCountdowns.forEach()` and creates the necessary HTML elements using `document.createElement()`. Event listeners are also added to the edit and delete buttons within each saved countdown element.
+
+4. The `saveCountdowns()` function is defined. This function takes an array of countdowns, converts it to JSON using `JSON.stringify()`, and saves it to the browser's local storage using `localStorage.setItem()`.
+
+5. An event listener is added to the `countdownForm` element for the `submit` event. This event listener handles the submission of the countdown form. It prevents the default form submission behavior using `event.preventDefault()`, retrieves the entered countdown date and time, validates it, prompts the user for a countdown name, adds the new countdown to the saved countdowns array, saves the countdowns to local storage, and reloads the saved countdowns using `loadSavedCountdowns()`.
+
+6. The `loadSavedCountdowns()` function is called initially to load and display any existing saved countdowns when the page is loaded.
+
+7. The `countdown()` function is defined. This function takes the countdown name, target date, and countdown container as parameters. It updates the countdown display every second by calculating the remaining time and displaying it in the HTML using `countdownContainer.innerHTML`. If the countdown reaches zero, it clears the interval and displays a completion message.
+
+8. The code snippet ends with the creation of `editButton` and `deleteButton` elements, along with their event listeners for editing and deleting saved countdowns.
+
+In summary, this JavaScript code sets up event listeners, loads saved countdowns, handles countdown creation and display, saves countdowns to local storage, and provides functionality for editing and deleting saved countdowns.

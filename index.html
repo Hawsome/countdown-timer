@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta lang="en-us">
+  <meta property="og:type" content="website">
+  <meta name="description" content="A simple to-do list app that allows users to add, edit, and delete tasks.">
+  <meta name="author" content="Olaoluwa Akinfenwa">
+  <meta name="robots" content="index, follow">
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/7624c7c0d1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="countdown">
+    <div class="countdown-item">
+      <span class="days"></span>
+      <span>Days</span>
+    </div>
+    <div class="countdown-item">
+      <span class="hours"></span>
+      <span>Hours</span>
+    </div>
+    <div class="countdown-item">
+      <span class="minutes"></span>
+      <span>Minutes</span>
+    </div>
+    <div class="countdown-item" id="ci">
+      <span class="seconds"></span>
+      <span>Seconds</span>
+    </div>
+  </div>
+
+  <div class="countdown-form">
+    <form>
+      <input type="datetime-local" required>
+      <button type="submit">Start Countdown</button>
+    </form>
+  </div>
+
+  <div class="saved-countdowns">
+    <!-- Saved countdowns will be added here dynamically -->
+  </div>
+  <footer>
+    <p>&copy; 2023 Olaoluwa Akinfenwa. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/olaoluwa-akinfenwa-b44026208" class="linkedin" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://twitter.com/hawsome_a" class="twitter" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="mailto:awesome.akinfenwa@outlook.com" class="email" target="_blank">
+            <i class="far fa-envelope"></i>
+        </a>
+    </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
