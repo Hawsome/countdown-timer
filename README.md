@@ -1,1 +1,2 @@
 # countdown-timer
+This website is a countdown timer that allows users to set and track countdowns for different events or deadlines. It provides a simple and user-friendly interface where you can enter a date and time for your countdown. Once started, it will display the remaining time in days, hours, minutes, and seconds. You can also save multiple countdowns and manage them easily. The website is developed by Olaoluwa Akinfenwa and includes features like editing countdown names and deleting countdowns.
